@@ -15,15 +15,16 @@ void Putnicki::odstampaj(std::ostream& out) const
 
 bool Putnicki::preko95()
 {
-	if (ukupanBrojSedista == 0) return false;
+	if (getPopunjenost() == 0) 
+		return false;
 
-	double br = ukupanBrojSedista-brojNepopunjenihSedista;
+	return (getPopunjenost() > 95);
+}
 
-	return ((br / ukupanBrojSedista * 100) > 95);
-
-	//if ((br / ukupanBrojSedista * 100) > 95)
-	//	return true;
-	////da li treba ovo dole uopste...?
-	//else
-	//	return false;
+double Putnicki::getPopunjenost()
+{
+	if (ukupanBrojSedista == 0) 
+		return false;
+	double br = ukupanBrojSedista - brojNepopunjenihSedista;
+	return (br / ukupanBrojSedista) * 100;
 }

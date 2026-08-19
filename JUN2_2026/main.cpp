@@ -46,7 +46,7 @@ void main()
 	cout << *p;
 	// 4 poena
 	POINTS(4);
-	cout << p->AvioKompanijaSaNajvećimStepeonPopunjenostiKapaciteta();
+	cout << p->AvioKompanijaSaNajvecimStepenomPopunjenostiKapaciteta();
 	// 2 poena
 	POINTS(2);
 	delete p;

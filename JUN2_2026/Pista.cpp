@@ -66,13 +66,27 @@ int Pista::PopunjeniPreko95()
 
 void Pista::ReorganizujAvioneNaPisti()
 {
-	//Avion* a = niz[0];
+	Avion* pom = nullptr;
 
-	for (int i = 1; i < tr; i++)
+	for (int i = 0; i < tr; i++)
 	{
-		if(niz[i].)
+		for (int j = i; j < tr; j++)
+		{
+			if (niz[i]->getPopunjenost() < niz[j]->getPopunjenost())
+			{
+				pom = niz[i];
+				niz[i] = niz[j];
+				niz[j] = pom;
+			}
+		}
 	}
 }
+
+char* Pista::AvioKompanijaSaNajvecimStepenomPopunjenostiKapaciteta()
+{
+	return nullptr;
+}
+
 
 std::ostream& operator<<(std::ostream& out, const Pista& p)
 {

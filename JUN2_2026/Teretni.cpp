@@ -14,5 +14,10 @@ void Teretni::odstampaj(std::ostream& out) const
 
 bool Teretni::preko95()
 {
-	return ((double)trenutnaMasaTeretaT/maksTeretT *100) > 95;
+	return (getPopunjenost() > 95);
+}
+
+double Teretni::getPopunjenost()
+{
+	return ((double)trenutnaMasaTeretaT / maksTeretT * 100);
 }

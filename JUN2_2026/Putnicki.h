@@ -15,5 +15,6 @@ public:
 	void odstampaj(std::ostream& out) const override;
 
 	bool preko95() override;
+	double getPopunjenost() override;
 };
 

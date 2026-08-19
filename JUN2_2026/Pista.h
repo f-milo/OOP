@@ -20,6 +20,9 @@ public:
 	int PopunjeniPreko95();
 
 	void ReorganizujAvioneNaPisti();
+	char* AvioKompanijaSaNajvecimStepenomPopunjenostiKapaciteta();
+
+
 
 };
 
