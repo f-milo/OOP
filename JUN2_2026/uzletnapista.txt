@@ -1,0 +1,23 @@
+Stampanje piste
+Maksimalan broj aviona na pisti: 6
+Trenutni broj aviona na pisti: 6
+Stampa aviona koji su na pisti: 
+
+0. Avion:
+Kod: JU20C Naziv Kompanije: AirSerbia Ukupan broj sedista: 196 Broj sedista u biznis klasi: 12 Broj nepopunjenih sedista: 25 Masa tereta: 3.56
+
+1. Avion:
+Kod: JS10X Naziv Kompanije: SwissAir Ukupan broj sedista: 201 Broj sedista u biznis klasi: 8 Broj nepopunjenih sedista: 75 Masa tereta: 1.87
+
+2. Avion:
+Kod: JU02A Naziv Kompanije: AirSerbia Ukupan broj sedista: 196 Broj sedista u biznis klasi: 12 Broj nepopunjenih sedista: 7 Masa tereta: 4.85
+
+3. Avion:
+Kod: TS10X Naziv Kompanije: SwissAir Maksimalni dolet: 7500km. Maksimalni teret: 25t.  Trenutna masa tereta: 24.7t.
+
+4. Avion:
+Kod: TE007 Naziv Kompanije: Etihad Maksimalni dolet: 15000km. Maksimalni teret: 75t.  Trenutna masa tereta: 58.7t.
+
+5. Avion:
+Kod: TS707 Naziv Kompanije: SwissAir Maksimalni dolet: 9500km. Maksimalni teret: 65t.  Trenutna masa tereta: 64.7t.
+

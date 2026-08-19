@@ -100,7 +100,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -125,9 +125,15 @@
   <ItemGroup>
     <ClCompile Include="Avion.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pista.cpp" />
+    <ClCompile Include="Putnicki.cpp" />
+    <ClCompile Include="Teretni.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Avion.h" />
+    <ClInclude Include="Pista.h" />
+    <ClInclude Include="Putnicki.h" />
+    <ClInclude Include="Teretni.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

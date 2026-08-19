@@ -1,6 +1,12 @@
 ﻿
 #include <fstream>
 #include <iostream>
+
+#include "Avion.h"
+#include "Pista.h"
+#include "Putnicki.h"
+#include "Teretni.h"
+
 using namespace std;
 void POINTS(int p)
 {
@@ -32,7 +38,8 @@ void main()
 	cout << *p;
 	// 2 poena
 	POINTS(2);
-	cout << p->PopunjeniPreko95();
+	cout << "Broj aviona popunjenih PREKO 95%: ";
+	cout << p->PopunjeniPreko95() << std::endl;
 	// 4 poena
 	POINTS(4);
 	p->ReorganizujAvioneNaPisti();
@@ -43,53 +50,69 @@ void main()
 	// 2 poena
 	POINTS(2);
 	delete p;
+
+
+
+
+
+
+
+
+
+
+
+
+
 	// ------------------------- Zadatak 2 ---------------------------------
-	// 1 poen
-	POINTS(1);
-	GenerickiNiz<int, 3> a;
-	GenerickiNiz<int, 3> b;
-	// 1 poen
-	POINTS(1);
-	cin >> a;
-	cin >> b;
-	// 1 poen
-	POINTS(1);
 
-	GenerickiNiz<int> c = a + b;
-	cout << c;
-	// 1 poen
-	POINTS(1);
-	cout << c.Max();
 
-	// 2 poena
-	POINTS(2);
-	c.Sort();
-	// 2 poena
-	POINTS(2);
-	c.SnimiUFajl("int.txt");
-	// ------------------- Vagon ---------------
-	// 1 poen
-	POINTS(1);
-	GenerickiNiz<Vagon, 2> v1;
-	GenerickiNiz<Vagon, 2> v2;
-	// 1 poen
-	POINTS(1);
-	cin >> v1;
-	cin >> v2;
-	// 1 poen
-	POINTS(1);
-	GenerickiNiz<Vagon> v = v1 + v2;
-	cout << v;
-	// 1 poen
-	POINTS(1);
-	cout << v.Max();
-	// 2 poena
-	POINTS(2);
-	v.Sort();
-	// 2 poena
-	POINTS(2);
-	v.SnimiUFajl("vagon.txt");
-	// Try-catch 4 poena
+
+	//// 1 poen
+	//POINTS(1);
+	//GenerickiNiz<int, 3> a;
+	//GenerickiNiz<int, 3> b;
+	//// 1 poen
+	//POINTS(1);
+	//cin >> a;
+	//cin >> b;
+	//// 1 poen
+	//POINTS(1);
+
+	//GenerickiNiz<int> c = a + b;
+	//cout << c;
+	//// 1 poen
+	//POINTS(1);
+	//cout << c.Max();
+
+	//// 2 poena
+	//POINTS(2);
+	//c.Sort();
+	//// 2 poena
+	//POINTS(2);
+	//c.SnimiUFajl("int.txt");
+	//// ------------------- Vagon ---------------
+	//// 1 poen
+	//POINTS(1);
+	//GenerickiNiz<Vagon, 2> v1;
+	//GenerickiNiz<Vagon, 2> v2;
+	//// 1 poen
+	//POINTS(1);
+	//cin >> v1;
+	//cin >> v2;
+	//// 1 poen
+	//POINTS(1);
+	//GenerickiNiz<Vagon> v = v1 + v2;
+	//cout << v;
+	//// 1 poen
+	//POINTS(1);
+	//cout << v.Max();
+	//// 2 poena
+	//POINTS(2);
+	//v.Sort();
+	//// 2 poena
+	//POINTS(2);
+	//v.SnimiUFajl("vagon.txt");
+	//// Try-catch 4 poena
 }
 
 
@@ -116,8 +139,10 @@ void main()
 //kapaciteta za putnički avion(float vrednost) se računa kao odnos broja popunjenih sedišta i
 //ukupnog broja sedišta.Stepen popunjenosti kapaciteta za teretni avion(float vrednost) računa se
 //kao odnos mase trenutnog tereta u avionu i maksimalne mase tereta koji avion može da preveze.
+// 
 //- Reorganizovati avione na uzletnoj pisti, tako da prvo poleću avioni sa većim kapacitetom
 //popunjenosti.
+// 
 //- Prikazati avio kompaniju koja ima najveći stepen popunjenost kapaciteta svih aviona te kompanije
 //na uzletnoj pisti.
 //

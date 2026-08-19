@@ -18,12 +18,30 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pista.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Avion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Putnicki.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Teretni.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Pista.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Avion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Putnicki.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Teretni.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
