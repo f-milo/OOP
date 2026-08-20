@@ -8,6 +8,8 @@
 #include "Teretni.h"
 
 using namespace std;
+void Zadatak1();
+void Zadatak2();
 void POINTS(int p)
 {
 	cout << "\033[" << 44 << "m";
@@ -15,6 +17,15 @@ void POINTS(int p)
 	cout << "\033[0m";
 }
 void main()
+{
+	Zadatak1();
+	Zadatak2();
+}
+
+
+
+
+void Zadatak1()
 {
 	// ------------------------- Zadatak 1 ---------------------------------
 	// 1 poen
@@ -53,15 +64,15 @@ void main()
 
 
 
+}
 
 
 
 
 
 
-
-
-
+void Zadatak2()
+{
 
 	// ------------------------- Zadatak 2 ---------------------------------
 
