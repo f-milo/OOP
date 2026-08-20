@@ -84,7 +84,39 @@ void Pista::ReorganizujAvioneNaPisti()
 
 char* Pista::AvioKompanijaSaNajvecimStepenomPopunjenostiKapaciteta()
 {
-	return nullptr;
+	if (tr == 0)
+		return nullptr;
+
+	double trProsek = 0;
+	double zbirPopunjenosti = 0;
+	double maksProsek = -1;
+	int trBrojAviona = 0;
+	char* trNAK = niz[0]->getNazivAK();
+	char* maksNAK = niz[0]->getNazivAK();
+	for (int i = 0; i < tr; i++)
+	{
+		trBrojAviona = 0;
+		trProsek = 0;
+		trNAK = niz[i]->getNazivAK();
+		zbirPopunjenosti = 0;
+
+		for (int j = 0; j < tr; j++)
+		{
+			if (strcmp(trNAK, niz[j]->getNazivAK()) == 0)
+			{
+				zbirPopunjenosti += niz[j]->getPopunjenost();
+				trBrojAviona += 1;
+
+			}
+		}
+		trProsek = zbirPopunjenosti / trBrojAviona;
+		if (trProsek > maksProsek)
+		{
+			maksProsek = trProsek;
+			maksNAK = trNAK;
+		}
+	}
+	return maksNAK;
 }
 
 

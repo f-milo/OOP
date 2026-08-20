@@ -14,6 +14,8 @@ public:
 	virtual bool preko95() = 0;
 
 	virtual double getPopunjenost() = 0;
+
+	char* getNazivAK() { return this->nazivAvioKompanije; };
 	//cpy cctor
 
 	friend std::ostream& operator<<(std::ostream& out, Avion& a);
