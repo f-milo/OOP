@@ -12,69 +12,91 @@ private:
 	int tr=0;
 
 public:
+	Kolekcija()
+	{
+
+	}
+
 	Kolekcija(int _maks)
 	{
 		niz = new T[_maks];
+		maks = _maks;
 	}
-	void DodajPodatak(int _pod)
+
+	~Kolekcija()
 	{
+		delete[] niz;
+	}
+	void DodajPodatak(T _pod)
+	{
+		if (tr >= maks)
+			throw("Niz je napunjen");
 		niz[tr] = _pod;
 		tr++;
 		std::cout << "Uspesno dodato" << tr << std::endl;
 	}
 
-	friend std::ostream& operator<<(std::ostream& out, Kolekcija& k)
+	friend std::ostream& operator<<(std::ostream& out, const Kolekcija& k)
 	{
+		out << k.maks << std::endl;
+		out << k.tr << std::endl;
 		for (int i = 0; i < k.tr; i++)
 		{
-			out << i << ". EL NIZA: " << k.niz[i] << std::endl;
+			out << k.niz[i] << std::endl;//operator <<
 
 		}
 		return out;
 	}
 	void Obrisi(int indeks)
 	{
-		if (indeks > tr)
+		if (indeks < 0 || indeks >= tr) // tr je int, ne mora...
 			return;
 		
 		
 		
-		tr--;
+	
 		
-		for (int i = indeks; i < tr; i++)
+		for (int i = indeks; i < tr-1; i++)
 		{
-			niz[i] = niz[i + 1];
+			niz[i] = niz[i + 1]; //operator =
 		}
+		tr--;
 	}
 
 	float OdrediProsek()
 	{
 		float rez = 0;
 
+		if (tr == 0) //ako je prazan nema svrhe da se ista radi...
+			return 0;
+
 		for (int i = 0; i < tr; i++)
 		{
-			rez += niz[i];
+			rez = rez + niz[i]; //oeprator +
 		}
+
+
 		return rez/tr;
 	}
 
 
-	int NajveciPodatak()
+	T& NajveciPodatak()
 	{
-		if (niz == nullptr)
-			return 0;
+		if (niz != nullptr)
+		{
 
-		int maks = niz[0];
+		int maksIndeks = 0;
 
 		for (int i = 0; i < tr; i++)
 		{
-			if (niz[i] > maks)
+			if (niz[i] > niz[maksIndeks])//operaotr >
 			{
-				maks = niz[i];
+				maksIndeks = i;
 			}
 		}
 
-		return maks;
+		return niz[maksIndeks];
+		}
 	}
 
 	void Sacuvaj(const char* fname)
@@ -115,5 +137,61 @@ public:
 		To znači da se automatski poziva tvoj friend operator<< koji si prethodno napisao u Kolekcija.h:
 		
 		*/
+	}
+
+
+
+	void Ucitaj(const char* fname)
+	{
+		std::ifstream in(fname);
+
+		if (!in.is_open())
+			throw("FAJL NIJE ORVOREN ZA CITANJE ");
+		int nmaks = -1;
+		int ntr = -1;
+
+		in >> nmaks;
+		in >> ntr;
+
+
+
+
+		if (niz != nullptr)
+			delete[] niz;
+
+		maks = nmaks;
+		niz = new T[maks];
+		tr = 0;
+
+		T temp;
+		for (int i = 0; i < ntr; i++)
+		{
+			in >> temp;     // operator>>
+			DodajPodatak(temp);
+		}
+
+
+		friend std::ostream& operator<<(std::ostream& out, const Kolekcija & k)
+		{
+
+		}
+
+		Kolekcija& operator=(const Kolekcija& k)
+		{
+
+		}
+		Kolekcija operator+(const Kolekcija& k)
+		{
+
+		}
+		bool operator>(const Kolekcija& k1) //prvi parametar je this//drgui je k1
+		{
+
+		}
+
+		friend std::istream& operator>>(std::istream& in, Kolekcija& k)
+		{
+
+		}
 	}
 };

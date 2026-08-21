@@ -34,12 +34,12 @@ void main() {
 
 		// 1 bod
 		kolekcijaA.Sacuvaj("KolekcijaA.txt");
-/*
 
 		// 2 boda
 		Kolekcija<int> kolekcijaATest(maxPodataka);
 		kolekcijaATest.Ucitaj("KolekcijaA.txt");
 		cout << kolekcijaATest << endl; // kolekcijaATest.Ispisi(cout);
+/*
 
 	*/
 	}
