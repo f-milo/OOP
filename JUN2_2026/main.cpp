@@ -7,6 +7,8 @@
 #include "Putnicki.h"
 #include "Teretni.h"
 
+#include "GenerickiNiz.h"
+
 using namespace std;
 void Zadatak1();
 void Zadatak2();
@@ -18,7 +20,7 @@ void POINTS(int p)
 }
 void main()
 {
-	Zadatak1();
+	//Zadatak1();
 	Zadatak2();
 }
 
@@ -75,55 +77,54 @@ void Zadatak2()
 {
 
 	// ------------------------- Zadatak 2 ---------------------------------
+	// 1 poen
+	POINTS(1);
+	GenerickiNiz<int, 3> a;
+	GenerickiNiz<int, 3> b;
+	// 1 poen
+	POINTS(1);
+	cin >> a;
+	cin >> b;
+	// 1 poen
+	/*
+	POINTS(1);
 
+	GenerickiNiz<int> c = a + b;
+	cout << c;
+	// 1 poen
+	POINTS(1);
+	cout << c.Max();
 
-
-	//// 1 poen
-	//POINTS(1);
-	//GenerickiNiz<int, 3> a;
-	//GenerickiNiz<int, 3> b;
-	//// 1 poen
-	//POINTS(1);
-	//cin >> a;
-	//cin >> b;
-	//// 1 poen
-	//POINTS(1);
-
-	//GenerickiNiz<int> c = a + b;
-	//cout << c;
-	//// 1 poen
-	//POINTS(1);
-	//cout << c.Max();
-
-	//// 2 poena
-	//POINTS(2);
-	//c.Sort();
-	//// 2 poena
-	//POINTS(2);
-	//c.SnimiUFajl("int.txt");
-	//// ------------------- Vagon ---------------
-	//// 1 poen
-	//POINTS(1);
-	//GenerickiNiz<Vagon, 2> v1;
-	//GenerickiNiz<Vagon, 2> v2;
-	//// 1 poen
-	//POINTS(1);
-	//cin >> v1;
-	//cin >> v2;
-	//// 1 poen
-	//POINTS(1);
-	//GenerickiNiz<Vagon> v = v1 + v2;
-	//cout << v;
-	//// 1 poen
-	//POINTS(1);
-	//cout << v.Max();
-	//// 2 poena
-	//POINTS(2);
-	//v.Sort();
-	//// 2 poena
-	//POINTS(2);
-	//v.SnimiUFajl("vagon.txt");
-	//// Try-catch 4 poena
+	// 2 poena
+	POINTS(2);
+	c.Sort();
+	// 2 poena
+	POINTS(2);
+	c.SnimiUFajl("int.txt");
+	// ------------------- Vagon ---------------
+	// 1 poen
+	POINTS(1);
+	GenerickiNiz<Vagon, 2> v1;
+	GenerickiNiz<Vagon, 2> v2;
+	// 1 poen
+	POINTS(1);
+	cin >> v1;
+	cin >> v2;
+	// 1 poen
+	POINTS(1);
+	GenerickiNiz<Vagon> v = v1 + v2;
+	cout << v;
+	// 1 poen
+	POINTS(1);
+	cout << v.Max();
+	// 2 poena
+	POINTS(2);
+	v.Sort();
+	// 2 poena
+	POINTS(2);
+	v.SnimiUFajl("vagon.txt");
+	// Try-catch 4 poena
+	*/
 }
 
 

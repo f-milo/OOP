@@ -124,6 +124,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Avion.cpp" />
+    <ClCompile Include="GenerickiNiz.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pista.cpp" />
     <ClCompile Include="Putnicki.cpp" />
@@ -131,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Avion.h" />
+    <ClInclude Include="GenerickiNiz.h" />
     <ClInclude Include="Pista.h" />
     <ClInclude Include="Putnicki.h" />
     <ClInclude Include="Teretni.h" />
