@@ -1,5 +1,4 @@
-8 4
-23
-37
-28
-31
+0. EL NIZA: 23
+1. EL NIZA: 37
+2. EL NIZA: 28
+3. EL NIZA: 31

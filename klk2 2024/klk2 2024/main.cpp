@@ -27,7 +27,6 @@ void main() {
 		// 1 bod
 		float prosecnaOcena = kolekcijaA.OdrediProsek();
 		cout << prosecnaOcena << endl;
-/*
 
 		// 1 bod
 		int najveciPodatak = kolekcijaA.NajveciPodatak();
@@ -35,6 +34,7 @@ void main() {
 
 		// 1 bod
 		kolekcijaA.Sacuvaj("KolekcijaA.txt");
+/*
 
 		// 2 boda
 		Kolekcija<int> kolekcijaATest(maxPodataka);
