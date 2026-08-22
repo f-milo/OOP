@@ -1,10 +1,12 @@
 ﻿//8:34 //8:52/ 22.08.26
 #include <iostream>
-
+//1.
 #include "Pice.h"
 #include "Voda.h";
 #include "Sok.h";
 #include "Skladiste.h";
+//2. 
+#include "Fabrika.h";
 
 using namespace std;
 
@@ -86,7 +88,6 @@ void zadatak1()
 
 void zadatak2()
 {
-	/*
 	int maxPodataka = 8, brojPodataka = 7;
 	// 3 boda
 	// postavljanje i prihvatanje izuzetaka
@@ -96,6 +97,7 @@ void zadatak2()
 		// 1 bod
 		for (int i = 0; i < brojPodataka; i++)
 			fv.Dodaj(voda[i]);
+	/*
 		cout << fv << endl; // fv.Ispisi(cout);
 		// 1 bod
 		fv.Izbaci(voda[1]);
@@ -152,13 +154,13 @@ void zadatak2()
 		Fabrika<Sokovi> novaUcS(maxPodataka);
 		novaUcS.Ucitaj("NovaFabrikaSokova.txt");
 		cout << novaUcS << endl; // novaUcS.Ispisi(cout);
-	}
 	*/
+	}
 }
 void main()
 {
-	zadatak1();
-	//zadatak2();
+	//zadatak1();
+	zadatak2();
 }
 
 /*
