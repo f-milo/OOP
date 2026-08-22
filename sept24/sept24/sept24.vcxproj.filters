@@ -30,6 +30,9 @@
     <ClCompile Include="Skladiste.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sokovi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Pice.h">
@@ -46,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="Fabrika.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sokovi.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
