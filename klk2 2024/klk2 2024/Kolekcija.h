@@ -27,6 +27,9 @@ public:
 	{
 		delete[] niz;
 	}
+	// int getVal()
+	//?
+
 	void DodajPodatak(T _pod)
 	{
 		if (tr >= maks)
@@ -36,17 +39,6 @@ public:
 		std::cout << "Uspesno dodato" << tr << std::endl;
 	}
 
-	friend std::ostream& operator<<(std::ostream& out, const Kolekcija& k)
-	{
-		out << k.maks << std::endl;
-		out << k.tr << std::endl;
-		for (int i = 0; i < k.tr; i++)
-		{
-			out << k.niz[i] << std::endl;//operator <<
-
-		}
-		return out;
-	}
 	void Obrisi(int indeks)
 	{
 		if (indeks < 0 || indeks >= tr) // tr je int, ne mora...
@@ -170,28 +162,139 @@ public:
 			DodajPodatak(temp);
 		}
 
-
-		friend std::ostream& operator<<(std::ostream& out, const Kolekcija & k)
-		{
-
-		}
-
-		Kolekcija& operator=(const Kolekcija& k)
-		{
-
-		}
-		Kolekcija operator+(const Kolekcija& k)
-		{
-
-		}
-		bool operator>(const Kolekcija& k1) //prvi parametar je this//drgui je k1
-		{
-
-		}
-
-		friend std::istream& operator>>(std::istream& in, Kolekcija& k)
-		{
-
-		}
 	}
+
+	friend std::ostream& operator<<(std::ostream& out, const Kolekcija & k)
+	{
+		out << k.maks <<std::endl;
+		out << k.tr << std::endl;
+		for (int i = 0; i < k.tr; i++)
+		{
+			out << k.niz[i] << std::endl;
+		}
+		return out;
+	}
+
+	Kolekcija& operator=(const Kolekcija& k)
+	{
+		if (this == &k)
+			return *this;
+		maks = k.maks;
+		tr = k.tr;
+		delete[] niz; //zasto?
+
+
+			//objasnjenje:
+			/*
+			
+			Pre dodele: Objekat A već ima svoj pokazivač niz koji pokazuje na dinamičku memoriju od 10 elemenata (koju je napravio njegov konstruktor na početku).
+
+Ako NE staviš delete[] niz;:
+Kada napišeš A.niz = new int[20], pokazivač u A dobija novu adresu na RAM-u. Stara adresa (onih 10 elemenata) se zaboravlja, ali ta memorija ostaje zauzeta na računaru! Program više ne može da joj pristupi niti da je oslobodi – napravio si curenje memorije (memory leak).
+
+Zato mora delete[] niz;:
+Pre nego što u A dodeliš novi niz veličine 20, moraš prvo osloboditi onih starih 10 elemenata koje je A nosio sa sobom.
+			
+			
+			*/
+
+
+
+		niz = new T[maks];
+		for (int i = 0; i < tr; i++)
+		{
+			niz[i] = k.niz[i];
+		}
+		return *this;
+	}
+		
+	
+	Kolekcija operator+(const Kolekcija& k)
+	{
+		int vecitr = 0;
+		int manjitr = 0;
+		int vecimaks = 0;
+
+		if (k.tr > tr)
+		{
+			vecitr = k.tr;
+			manjitr = tr;
+		}
+		else
+		{
+			vecitr = tr;
+			manjitr = k.tr;
+		}
+
+		if (k.maks > maks)
+			vecimaks = k.maks;
+		else
+			vecimaks = maks;
+
+
+		Kolekcija k1(vecimaks);
+		k1.tr = vecitr;
+
+
+		for (int i = 0; i < vecitr; i++)
+		{
+			if (vecitr == k.tr)
+				k1.niz[i] = k.niz[i];
+			else
+				k1.niz[i] = niz[i];
+		}
+
+		for (int i = 0; i < manjitr; i++)
+		{
+			if (manjitr == k.tr)
+				k1.niz[i] = k1.niz[i] + k.niz[i];
+			else
+				k1.niz[i] = k1.niz[i] + niz[i];
+		}
+		return k1;
+	}
+		
+		//bool operator>(const Kolekcija& k1) const //prvi parametar je this//drgui je k1
+		//{
+		//	if (this.niz[i].getVal() > k1.niz[i].getVal())
+		//		return true;
+		//	else
+		//		return false;
+		//}
+
+	//friend std::istream& operator>>(std::istream& in, Kolekcija& k)
+	//{
+	//	in >> k.maks >> k.tr;
+	//	
+	//	for (int i = 0; i < k.tr; i++)
+	//	{
+	//		in >> k.niz[i];
+	//	}
+
+	//	return in;
+	//}
+
+
+	friend std::istream& operator>>(std::istream& in, Kolekcija& k)
+	{
+		int nmaks, ntr;
+		if (in >> nmaks >> ntr)
+		{
+			delete[] k.niz;
+			k.maks = nmaks;
+			k.tr = 0; // OBAVEZNO reset na 0 pre ucitavanja!
+			k.niz = new T[k.maks];
+
+			T temp;
+			for (int i = 0; i < ntr; i++)
+			{
+				in >> temp;
+				k.DodajPodatak(temp);
+			}
+		}
+		return in;
+	}
+
+
+
 };

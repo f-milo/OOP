@@ -46,7 +46,6 @@ void main() {
 	catch (const char* poruka) {
 		cout << poruka << endl;
 	}
-	/*
 	try {
 		// 1 bod
 		Kolekcija<Ispit> kolIspit(maxPodataka);
@@ -83,9 +82,10 @@ void main() {
 	catch (const char* porukica) {
 		cout << porukica << endl;
 	}
-*/
 }
 
+	/*
+*/
 
 
 
