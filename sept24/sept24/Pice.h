@@ -13,6 +13,8 @@ public:
 	virtual ~Pice() {};
 
 	int getBrojAmbalaza() const { return brojAmbalaza; }
+	double getZapremina() const { return zapreminaAmbalaze; }
+
 	void dodajBrojAmbalaza(int _broj) 
 	{ 
 		brojAmbalaza += _broj;
@@ -23,4 +25,6 @@ public:
 
 	bool operator==(const Pice& p) const;
 	virtual bool uporedi(const Pice* p) const;
+
+	virtual void Prikazi() const;
 };

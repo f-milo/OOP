@@ -19,6 +19,10 @@ public:
 	
 	void Izdvoji(const Pice& p, int brKom);
 
+	void Presipaj(Pice& voda2, Pice& voda1);
 
+	bool DovoljnaKolicina(int kol);
+
+	void VratiNaj(Pice*& piceMin, Pice*& piceMax);
 };
 

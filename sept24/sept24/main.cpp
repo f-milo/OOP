@@ -54,7 +54,6 @@ void zadatak1()
 	//s->print();
 	cout << *s << endl;
 	// 2 poena
-	/*
 	Voda voda2(2);
 	s->Presipaj(voda2, voda1);
 	//s->print();
@@ -67,11 +66,21 @@ void zadatak1()
 		cout << "Nema dovoljno vode i sokova" << endl;
 	// 2 poena
 	Pice* piceMin = nullptr, * piceMax = nullptr;
+	//razmisljanje.
+	//piceMin i piceMax su pointeri na Pice.
+	//funkcija njih treba da menja, ali bas njih, to znaci da treba referenca na njih
+	//posto su pokazivaci, nama treba ref na pointer
+	//void VratiNaj(Pice*& piceMin, Pice*& piceMax)
 	s->VratiNaj(piceMin, piceMax);
+	//nije tacno dok se ne sklone crvene linije iz koda...
+	
+	std::cout << "PICEMIN: " << std::endl;
 	piceMin->Prikazi();
+	std::cout << "PICEMAX: " << std::endl;
 	piceMax->Prikazi();
 	// 1 poena
 	delete s;
+	/*
 	*/
 }
 

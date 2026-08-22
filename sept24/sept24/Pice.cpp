@@ -23,3 +23,8 @@ bool Pice::uporedi(const Pice* p) const
 
 	return(zapreminaAmbalaze == p->zapreminaAmbalaze);
 }
+
+void Pice::Prikazi() const
+{
+	std::cout << *this;
+}
