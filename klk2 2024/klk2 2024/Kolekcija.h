@@ -262,38 +262,38 @@ Pre nego što u A dodeliš novi niz veličine 20, moraš prvo osloboditi onih st
 		//		return false;
 		//}
 
-	//friend std::istream& operator>>(std::istream& in, Kolekcija& k)
-	//{
-	//	in >> k.maks >> k.tr;
-	//	
-	//	for (int i = 0; i < k.tr; i++)
-	//	{
-	//		in >> k.niz[i];
-	//	}
-
-	//	return in;
-	//}
-
-
 	friend std::istream& operator>>(std::istream& in, Kolekcija& k)
 	{
-		int nmaks, ntr;
-		if (in >> nmaks >> ntr)
+		in >> k.maks >> k.tr;
+		
+		for (int i = 0; i < k.tr; i++)
 		{
-			delete[] k.niz;
-			k.maks = nmaks;
-			k.tr = 0; // OBAVEZNO reset na 0 pre ucitavanja!
-			k.niz = new T[k.maks];
-
-			T temp;
-			for (int i = 0; i < ntr; i++)
-			{
-				in >> temp;
-				k.DodajPodatak(temp);
-			}
+			in >> k.niz[i];
 		}
+
 		return in;
 	}
+
+
+	//friend std::istream& operator>>(std::istream& in, Kolekcija& k)
+	//{
+	//	int nmaks, ntr;
+	//	if (in >> nmaks >> ntr)
+	//	{
+	//		delete[] k.niz;
+	//		k.maks = nmaks;
+	//		k.tr = 0; // OBAVEZNO reset na 0 pre ucitavanja!
+	//		k.niz = new T[k.maks];
+
+	//		T temp;
+	//		for (int i = 0; i < ntr; i++)
+	//		{
+	//			in >> temp;
+	//			k.DodajPodatak(temp);
+	//		}
+	//	}
+	//	return in;
+	//}
 
 
 
