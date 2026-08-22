@@ -160,8 +160,37 @@ void zadatak2()
 }
 void main()
 {
-	zadatak1();
-	zadatak2();
+	try
+	{
+		zadatak1();
+	}
+	catch (const char* msg)
+	{
+		std::cout << "Error: " << msg << std::endl;
+	}
+	/*
+	catch (...)
+	{
+		std::cout << "Nepoznata greska u zadatku 1!" << std::endl;
+	}
+	// catch (...) : Služi da spreči rušenje programa ako se baci bilo koji drugi nepredviđeni izuzetak.
+	*/
+
+	try
+	{
+		zadatak2();
+	}
+	catch (const char* msg)
+	{
+		std::cout << "Greska: " << msg << std::endl;
+	}
+	/*
+	catch (...)
+	{
+		std::cout << "Nepoznata greska u zadatku 2!" << std::endl;
+	}
+	// catch (...) : Služi da spreči rušenje programa ako se baci bilo koji drugi nepredviđeni izuzetak.
+	*/
 }
 
 /*
