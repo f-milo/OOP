@@ -30,11 +30,11 @@ void zadatak1()
 		s->Dodaj(new Voda(voda[i]));
 		s->Dodaj(new Sok(sok[i], ukus1, procenat1, odnosCene));
 	}
-	/*
 	// 2 poena
 	//s->print();
 
 	cout << *s << endl;
+	cout << "DRUGI DEO" << endl;
 	// 2 poena
 	for (int i = 4; i < 8; i++)
 	{
@@ -44,8 +44,8 @@ void zadatak1()
 	//s->print();
 	cout << *s << endl;
 	// 2 poena
-	Sok sok(0.5, ukus1, procenat1, odnosCene);
-	s->Izdvoji(sok, 2);
+	Sok sok1(0.5, ukus1, procenat1, odnosCene);
+	s->Izdvoji(sok1, 2);
 	//s->print();
 	cout << *s << endl;
 	// 1 poena
@@ -54,6 +54,7 @@ void zadatak1()
 	//s->print();
 	cout << *s << endl;
 	// 2 poena
+	/*
 	Voda voda2(2);
 	s->Presipaj(voda2, voda1);
 	//s->print();

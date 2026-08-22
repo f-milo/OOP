@@ -13,7 +13,7 @@ public:
     ~Sok();
     void stampaj(std::ostream& out) const override;
 
-
+    bool uporedi(const Pice* p) const override;
 
 };
 

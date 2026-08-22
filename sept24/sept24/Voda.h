@@ -9,5 +9,8 @@ public:
     Voda(double _zapreminaAmbalaze);
     ~Voda() {};
     void stampaj(std::ostream& out) const override;
+
+    bool uporedi(const Pice* p) const override;
+
 };
 

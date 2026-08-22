@@ -14,5 +14,11 @@ public:
 	Skladiste(int _maks);
 	~Skladiste();
 	void Dodaj(Pice* p);
+
+	friend std::ostream& operator<<(std::ostream& out, const Skladiste& s);
+	
+	void Izdvoji(const Pice& p, int brKom);
+
+
 };
 
