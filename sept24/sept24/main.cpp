@@ -7,6 +7,7 @@
 #include "Skladiste.h";
 //2. 
 #include "Fabrika.h";
+#include "Sokovi.h";
 
 using namespace std;
 
@@ -97,14 +98,13 @@ void zadatak2()
 		// 1 bod
 		for (int i = 0; i < brojPodataka; i++)
 			fv.Dodaj(voda[i]);
-	/*
 		cout << fv << endl; // fv.Ispisi(cout);
 		// 1 bod
 		fv.Izbaci(voda[1]);
 		cout << fv << endl; //fv.Ispisi(cout);
 
 		// 1 bod
-		float ukupno = fv.Ukupno();
+		float ukupno = fv.UkupnaZapremina();
 		cout << ukupno << endl; //
 		// 1 bod
 		int vrednost = 1; float ukupnaVrednost = 0;
@@ -138,7 +138,7 @@ void zadatak2()
 		fs.Izbaci(Sokovi(ukus[1], zap[1], procenat[1]));
 		cout << fs << endl; //fs.Ispisi(cout);
 		// 2 boda
-		float ukupno = fs.Ukupno();
+		float ukupno = fs.UkupnaZapremina();
 		cout << ukupno << endl;
 		// 2 boda
 		Sokovi vr(ukus[0], zap[0], procenat[0]);
@@ -154,6 +154,7 @@ void zadatak2()
 		Fabrika<Sokovi> novaUcS(maxPodataka);
 		novaUcS.Ucitaj("NovaFabrikaSokova.txt");
 		cout << novaUcS << endl; // novaUcS.Ispisi(cout);
+	/*
 	*/
 	}
 }

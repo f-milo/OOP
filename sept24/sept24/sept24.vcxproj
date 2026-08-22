@@ -130,6 +130,7 @@
     <ClCompile Include="Voda.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Fabrika.h" />
     <ClInclude Include="Pice.h" />
     <ClInclude Include="Skladiste.h" />
     <ClInclude Include="Sok.h" />
