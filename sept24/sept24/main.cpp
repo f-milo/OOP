@@ -160,7 +160,7 @@ void zadatak2()
 }
 void main()
 {
-	//zadatak1();
+	zadatak1();
 	zadatak2();
 }
 
