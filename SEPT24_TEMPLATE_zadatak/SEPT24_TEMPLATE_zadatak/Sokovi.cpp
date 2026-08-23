@@ -29,20 +29,20 @@ Sokovi::Sokovi(const Sokovi& s)
 	procenat = s.procenat;
 }
 
-Sokovi Sokovi::operator+(const Sokovi& s)
-{
-	Sokovi* sok = new Sokovi();
-	sok->ukus = new char[strlen(s.ukus) + 3 + strlen(ukus) + 1];
-	strcpy(sok->ukus, ukus);
-	strcat(sok->ukus, " i ");
-	strcat(sok->ukus, s.ukus);
-
-	sok->zapremina = zapremina + s.zapremina;
-	sok->procenat = (procenat + s.procenat) / 2;
-
-	return *sok;
-	// TODO: insert return statement here
-}
+//Sokovi Sokovi::operator+(const Sokovi& s)
+//{
+//	Sokovi* sok = new Sokovi();
+//	sok->ukus = new char[strlen(s.ukus) + 3 + strlen(ukus) + 1];
+//	strcpy(sok->ukus, ukus);
+//	strcat(sok->ukus, " i ");
+//	strcat(sok->ukus, s.ukus);
+//
+//	sok->zapremina = zapremina + s.zapremina;
+//	sok->procenat = (procenat + s.procenat) / 2;
+//
+//	return *sok;
+//	// TODO: insert return statement here
+//}
 Sokovi& Sokovi::operator=(const Sokovi& s)
 {
 	if (this == &s)

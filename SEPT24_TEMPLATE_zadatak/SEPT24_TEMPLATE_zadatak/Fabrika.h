@@ -134,7 +134,7 @@ public:
 		}
 	}
 
-	Fabrika& Ucitaj(const char* fname)
+	void Ucitaj(const char* fname)
 	{
 		std::ifstream in(fname);
 		if (!in)
@@ -146,8 +146,6 @@ public:
 		{
 			in >> niz[i]; //>> operator
 		}
-
-		return *this;
 	}
 
 
