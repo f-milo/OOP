@@ -1,6 +1,9 @@
 ﻿#include <iostream>
 
 #include "Kolekcija.h"
+#include "Ispit.h"
+
+using namespace std;
 
 void main() 
 {

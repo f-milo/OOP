@@ -27,7 +27,7 @@ public:
 		if (tr >= maks)
 			throw("ne mogu da dodam, prepun je niz!");
 
-		niz[tr] = pod; //operator =
+		niz[tr] = pod; //operator Type = Type
 		tr++;
 	}
 	friend std::ostream& operator<<(std::ostream& out, const Kolekcija& k)
@@ -62,7 +62,7 @@ public:
 		
 		for (int i = indeks; i < tr - 1; i++)
 		{
-			niz[i] = niz[i + 1];
+			niz[i] = niz[i + 1]; //operator Type = Type
 		}
 		tr--;
 
@@ -73,7 +73,7 @@ public:
 		float rez = 0;
 		for (int i = 0; i < tr; i++)
 		{
-			rez = rez + niz[i];  //operator + i =
+			rez = rez + niz[i];  //operator float+Type
 
 		}
 		return rez/tr;
@@ -84,7 +84,7 @@ public:
 		int maksind = 0;
 		for (int i = 0; i < tr; i++)
 		{
-			if (niz[maksind] < niz[i])
+			if (niz[maksind] < niz[i])//operator Type < Type
 			{
 				maksind = i;
 			}
