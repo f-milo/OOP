@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "GenerickiNiz.h"
+#include "Vagon.h"
 
 
 using namespace std;
@@ -50,6 +51,9 @@ void main()
 	*/
 	// ------------------------- Zadatak 2 ---------------------------------
 	// 1 poen
+	try 
+	{
+
 	POINTS(1);
 	GenerickiNiz<int, 3> a;
 	GenerickiNiz<int, 3> b;
@@ -95,4 +99,9 @@ void main()
 	POINTS(2);
 	v.SnimiUFajl("vagon.txt");
 	// Try-catch 4 poena
+	}
+	catch (const char* msg)
+	{
+		cout << "Greska: " << msg << std::endl;
+	}
 }

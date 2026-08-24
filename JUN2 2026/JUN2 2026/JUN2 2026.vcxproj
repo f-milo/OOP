@@ -124,9 +124,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Vagon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GenerickiNiz.h" />
+    <ClInclude Include="Vagon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
